@@ -9,11 +9,11 @@ import { Button } from './components/ui/button'
 function App() {
   const [aiMessage, setAiMessage] = useState('nothing yet');
   const conversationId = "1";
-  const userInput = "reply with one sentence. please say hello there";
+  const message = "can you say goodbye?";
 
   const handleSendMessage = async () => {
-    const aiResponse = await sendChatMessage(conversationId, userInput);
-    setAiMessage(aiResponse.data);
+    const aiResponse = await sendChatMessage(conversationId, message);
+    setAiMessage(aiResponse.reply);
   }
 
   // handleSendMessage();
